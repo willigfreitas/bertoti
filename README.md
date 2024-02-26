@@ -7,5 +7,5 @@ Avaliando parte do conteúdo do livro quando abordado a respeito de trade-offs e
 
 - Citar 3 exemplos de trade-offs (em software) e explicá-los conforme comentários que fizemos na sexta(discutir em relação a requisitos-não funcionais).
 
-- Pensando em Python e Java temos as seguintes conclusões em relação a trade-offs:
+-Pensando em Python e Java temos as seguintes conclusões em relação a trade-offs:
 
