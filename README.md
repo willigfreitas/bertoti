@@ -9,3 +9,6 @@ Avaliando parte do conteúdo do livro quando abordado a respeito de trade-offs e
 
 -Pensando em Python e Java temos as seguintes conclusões em relação a trade-offs:
 
+- Java - WORA -Write once run anywhere - diferente de várias outras linguagens a praticidade de você fazer um código único e cada sistema operacional irá entender. Isso é possível porque em JAVA é utilizada a JVM. Quando se escreve um código em Java o código-fonte é compilado para um formato intermediário chamado bytecode. Esse bytecode é então executado pela JVM, que está disponível para várias plataformas. No entanto várias pessoas acham que desenvolver em JAVA é mais complicado que em outras linguagens, tais como Python, pois os códigos podem envolver um pouco mais de complexidade. Um exemplo é você pedir para "printar" um resultado de um "hello world" em Python e outro em Java. Daí se nota a grande diferença.
+- Python - Facilidade de codificação, vários comandos são muito simples por sua legibilidade e facilidade de se desenvolver rápidamente o código. Entretanto, essa facilidade pode resultar em um desempenho inferior em relação a outras linguagens quanto outras linguagens, tais como C++ ou Rust.
+
