@@ -34,3 +34,4 @@ Requisito Não Funcional Ruim: Tempo de Resposta
 
 Um requisito não funcional ruim seria uma meta de tempo de resposta muito rígida para todas as solicitações de streaming. Se a Netflix definir um tempo de resposta extremamente baixo como um requisito inflexível, isso pode levar a decisões arquitetônicas que comprometam a escalabilidade ou a disponibilidade do sistema em favor de tempos de resposta mais rápidos.
 
+Dentre as vantagens do sistema da ARQUITETURA ORIENTADA A EVENTOS.. 
