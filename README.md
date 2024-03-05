@@ -34,4 +34,108 @@ Requisito Não Funcional Ruim: Tempo de Resposta
 
 Um requisito não funcional ruim seria uma meta de tempo de resposta muito rígida para todas as solicitações de streaming. Se a Netflix definir um tempo de resposta extremamente baixo como um requisito inflexível, isso pode levar a decisões arquitetônicas que comprometam a escalabilidade ou a disponibilidade do sistema em favor de tempos de resposta mais rápidos.
 
-Dentre as vantagens do sistema da ARQUITETURA ORIENTADA A EVENTOS.. 
+Dentre as vantagens do sistema da ARQUITETURA ORIENTADA A EVENTOS é uma abordagem em que os componentes do sistema se comunicam por meio da geração, detecção e resposta a eventos.
+Seguem alguns exemplos de sistemas: 
+
+
+Internet das Coisas (IoT):
+
+Bom Requisito Não Funcional: Escalabilidade
+
+Um bom requisito não funcional para sistemas IoT seria a escalabilidade, garantindo que o sistema seja capaz de lidar com um grande número de dispositivos conectados e volumes crescentes de dados gerados por eles. Isso é essencial para garantir que o sistema possa suportar um aumento na adoção de dispositivos IoT sem comprometer o desempenho ou a disponibilidade.
+Requisito Não Funcional Ruim: Latência de Rede
+
+Um requisito não funcional ruim seria uma meta de latência de rede extremamente baixa para todas as comunicações entre dispositivos IoT e o backend. Se o sistema IoT definir uma meta de latência muito baixa como um requisito inflexível, isso pode limitar a escolha de tecnologias de comunicação, tornar o sistema mais complexo e caro de implementar e prejudicar a eficiência energética dos dispositivos.
+
+Aplicações de Monitoramento e Análise em Tempo Real:
+
+Bom Requisito Não Funcional: Confiabilidade
+
+Um bom requisito não funcional para aplicações de monitoramento e análise em tempo real seria a confiabilidade, garantindo que o sistema seja altamente disponível e capaz de processar e responder a eventos críticos de forma consistente e precisa. Isso é fundamental para garantir que o sistema possa detectar e responder a problemas imediatamente, minimizando o tempo de inatividade e maximizando a eficácia do monitoramento.
+Requisito Não Funcional Ruim: Custo de Processamento
+
+Um requisito não funcional ruim seria uma restrição de custo de processamento extremamente baixa para análise em tempo real. Se o sistema de monitoramento definir um limite muito baixo para os custos de processamento como um requisito inflexível, isso pode limitar a capacidade do sistema de processar e analisar dados de forma eficiente, resultando em análises imprecisas ou incompletas e comprometendo a eficácia do monitoramento.
+
+A arquitetura baseada em serviços (Service-Based Architecture) é uma abordagem na qual um sistema é dividido em serviços independentes e interconectados, cada um executando uma função específica e sendo acessado por meio de interfaces bem definidas. 
+
+Amazon Web Services (AWS):
+
+Bom Requisito Não Funcional: Escalabilidade
+
+Um bom requisito não funcional para a AWS seria a escalabilidade, garantindo que todos os serviços da AWS sejam altamente escaláveis para atender às demandas crescentes dos usuários. Isso inclui garantir que os serviços possam escalar horizontalmente de forma automática e eficiente para lidar com picos de tráfego, garantindo um alto nível de desempenho e disponibilidade para os clientes da AWS.
+Requisito Não Funcional Ruim: Disponibilidade Limitada
+
+Um requisito não funcional ruim seria uma disponibilidade limitada para qualquer serviço da AWS. Se um serviço tiver uma disponibilidade limitada, isso pode causar interrupções no serviço para os clientes, afetando negativamente a confiança no serviço e prejudicando a reputação da AWS como um provedor de serviços em nuvem confiável e de alta disponibilidade.
+Salesforce:
+
+Bom Requisito Não Funcional: Segurança
+
+Um bom requisito não funcional para Salesforce seria a segurança, garantindo que todos os dados armazenados e processados pelos serviços da Salesforce sejam protegidos adequadamente contra acesso não autorizado e violações de segurança. Isso inclui garantir que todos os serviços da Salesforce sigam as melhores práticas de segurança, como criptografia de dados, controle de acesso e monitoramento de atividades suspeitas.
+Requisito Não Funcional Ruim: Desempenho Insatisfatório
+
+Um requisito não funcional ruim seria um desempenho insatisfatório para qualquer serviço da Salesforce. Se um serviço da Salesforce tiver um desempenho insatisfatório, isso pode levar a tempos de resposta lentos para os usuários, afetando negativamente a experiência do usuário e a eficiência operacional das organizações que dependem dos serviços da Salesforce para suas operações de negócios.
+
+
+A arquitetura de microkernel é um estilo arquitetural que separa o núcleo mínimo (microkernel) das funcionalidades adicionais do sistema, permitindo uma maior modularidade e flexibilidade.
+
+Hypervisores (Hipervisores):
+
+Bom Requisito Não Funcional: Isolamento de Recursos
+
+Um bom requisito não funcional para hipervisores seria o isolamento eficaz de recursos entre as máquinas virtuais. Isso garante que cada máquina virtual tenha seus próprios recursos de CPU, memória e armazenamento isolados dos outros, proporcionando segurança e estabilidade para os sistemas hospedados. Um hipervisor com um alto nível de isolamento de recursos oferece uma garantia sólida de que as cargas de trabalho de uma máquina virtual não interferirão nas outras.
+Requisito Não Funcional Ruim: Sobrecarga de Desempenho
+
+Um requisito não funcional ruim seria uma sobrecarga excessiva de desempenho causada pela arquitetura de microkernel do hipervisor. Embora a arquitetura de microkernel ofereça benefícios em termos de modularidade e flexibilidade, ela também pode introduzir uma sobrecarga adicional devido à necessidade de comunicação entre os componentes do microkernel. Se a sobrecarga for muito alta, isso pode afetar negativamente o desempenho das máquinas virtuais hospedadas, reduzindo a eficiência da virtualização.
+QNX:
+
+Bom Requisito Não Funcional: Tempo de Resposta em Tempo Real
+
+Um bom requisito não funcional para o QNX seria um tempo de resposta previsível e consistente em tempo real para eventos críticos. A natureza em tempo real do QNX o torna adequado para sistemas onde a resposta imediata a eventos é essencial, como em sistemas de controle de automóveis, dispositivos médicos e sistemas de automação industrial. Um requisito de tempo de resposta em tempo real bem atendido garante que o QNX possa lidar com eventos críticos de forma rápida e confiável.
+Requisito Não Funcional Ruim: Complexidade de Desenvolvimento
+
+Um requisito não funcional ruim seria uma complexidade de desenvolvimento excessiva causada pela arquitetura de microkernel do QNX. Embora a arquitetura de microkernel ofereça benefícios em termos de modularidade e manutenibilidade, ela também pode introduzir uma complexidade adicional no desenvolvimento de aplicativos devido à necessidade de comunicação entre os diferentes componentes do microkernel. Se a complexidade de desenvolvimento for muito alta, isso pode aumentar o custo e o tempo de desenvolvimento de aplicativos para o QNX.
+
+A arquitetura de pipeline é uma abordagem em que as tarefas de processamento são divididas em etapas discretas, e cada etapa é realizada de forma sequencial, com os resultados sendo passados de uma etapa para a próxima.
+
+Compiladores:
+
+Bom Requisito Não Funcional: Eficiência de Processamento
+
+Um bom requisito não funcional para compiladores é a eficiência de processamento. Isso envolve garantir que cada etapa do pipeline do compilador seja otimizada para processar o código fonte de forma rápida e eficiente. Um compilador eficiente pode reduzir significativamente o tempo necessário para compilar grandes projetos de software, melhorando a produtividade dos desenvolvedores.
+Requisito Não Funcional Ruim: Precisão dos Resultados
+
+Um requisito não funcional ruim seria uma precisão insatisfatória dos resultados. Se o compilador não garantir a precisão das transformações realizadas em cada etapa do pipeline, isso pode levar a erros de compilação ou comportamento inesperado do programa final. A precisão dos resultados é essencial para garantir a confiabilidade e a qualidade do código compilado.
+
+
+
+A arquitetura em camadas (Layered Architecture) é um estilo arquitetural em que o sistema é dividido em camadas ou níveis distintos, onde cada camada é responsável por um conjunto específico de funcionalidades
+
+
+Redes de Computadores:
+
+Bom Requisito Não Funcional: Latência de Processamento
+
+Um bom requisito não funcional para redes de computadores é a latência de processamento. Isso envolve garantir que os pacotes de dados sejam processados rapidamente em cada etapa do pipeline de roteamento, com o mínimo de atraso possível. Uma baixa latência de processamento é crucial para garantir tempos de resposta rápidos e uma comunicação eficiente na rede.
+Requisito Não Funcional Ruim: Perda de Pacotes
+
+Um requisito não funcional ruim seria uma alta taxa de perda de pacotes. Se os sistemas de rede não garantirem a integridade dos pacotes de dados em cada etapa do pipeline de roteamento, isso pode resultar em pacotes perdidos ou corrompidos, afetando a confiabilidade e a qualidade da comunicação na rede. A perda de pacotes pode levar a uma experiência de usuário ruim e impactar negativamente a disponibilidade dos serviços de rede.
+
+Aplicações Web Tradicionais:
+
+Bom Requisito Não Funcional: Segurança dos Dados
+
+Um bom requisito não funcional para aplicações web tradicionais é a segurança dos dados. Ao adotar uma arquitetura em camadas, é fundamental garantir que os dados sensíveis dos usuários estejam protegidos em todas as camadas, desde a camada de apresentação até a camada de armazenamento de dados. Isso pode incluir criptografia de dados, autenticação robusta, autorização adequada e práticas de segurança recomendadas em todas as partes da aplicação.
+Requisito Não Funcional Ruim: Desempenho Lento da Interface do Usuário
+
+Um requisito não funcional ruim seria um desempenho lento da interface do usuário. Se a arquitetura em camadas não for adequadamente otimizada, isso pode levar a atrasos perceptíveis na renderização e na resposta da interface do usuário, prejudicando a experiência do usuário. Isso pode ser causado por uma má distribuição de tarefas entre as camadas, gargalos de comunicação ou operações de processamento excessivamente complexas na camada de apresentação.
+Aplicações Móveis:
+
+Bom Requisito Não Funcional: Consumo Eficiente de Energia
+
+Um bom requisito não funcional para aplicações móveis é o consumo eficiente de energia. Ao seguir uma arquitetura em camadas, é importante projetar a aplicação de forma a minimizar o consumo de energia, especialmente em dispositivos móveis com recursos limitados de bateria. Isso pode envolver otimizações de código, gerenciamento eficiente de recursos e minimização de operações em segundo plano que possam drenar a bateria do dispositivo.
+Requisito Não Funcional Ruim: Latência Excessiva na Comunicação com o Servidor
+
+Um requisito não funcional ruim seria uma latência excessiva na comunicação com o servidor. Se a arquitetura em camadas não for eficientemente projetada e implementada, isso pode resultar em tempos de resposta lentos para solicitações de dados do servidor, causando atrasos perceptíveis e frustração para os usuários. Isso pode ser causado por problemas de rede, sobrecarga de processamento no servidor ou ineficiências na comunicação entre as camadas da aplicação móvel.
+
+
+
