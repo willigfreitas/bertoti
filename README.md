@@ -147,12 +147,15 @@ Requisito Não Funcional Ruim: Latência Excessiva na Comunicação com o Servid
 Um requisito não funcional ruim seria uma latência excessiva na comunicação com o servidor. Se a arquitetura em camadas não for eficientemente projetada e implementada, isso pode resultar em tempos de resposta lentos para solicitações de dados do servidor, causando atrasos perceptíveis e frustração para os usuários. Isso pode ser causado por problemas de rede, sobrecarga de processamento no servidor ou ineficiências na comunicação entre as camadas da aplicação móvel.
 
 
-*4. Definição da arquitetura (à partir de  sistema escolhido)
+**4. Definição da arquitetura (à partir de  sistema escolhido)**
 --
+**Netflix**
 
-*5. classes uml
+Conhecida por sua arquitetura de microserviços. Cada função do sistema, como recomendações, reprodução de vídeo, gerenciamento de contas, entre outros, é tratada por microserviços separados. Isso permite que a Netflix se adapte rapidamente às mudanças no tráfego de usuários e ofereça uma experiência personalizada.
+
+**5. classes uml**
 --
-*6. código java
+**6. código java**
 --
-*7. testes
+**7. testes**
 --
