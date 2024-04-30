@@ -153,8 +153,12 @@ Um requisito não funcional ruim seria uma latência excessiva na comunicação 
 
 Conhecida por sua arquitetura de microserviços. Cada função do sistema, como recomendações, reprodução de vídeo, gerenciamento de contas, entre outros, é tratada por microserviços separados. Isso permite que a Netflix se adapte rapidamente às mudanças no tráfego de usuários e ofereça uma experiência personalizada.
 
-**5. classes uml**
+**5. Classes uml**
 --
+
+![UML JAVA](https://github.com/willigfreitas/bertoti/assets/48508462/ecafa921-976b-4bc2-a6ce-0985dbe018dc)
+
+
 **6. código java**
 --
 **7. testes**
