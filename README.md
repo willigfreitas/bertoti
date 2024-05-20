@@ -155,8 +155,7 @@ Conhecida por sua arquitetura de microserviços. Cada função do sistema, como 
 
 **5. Classes uml**
 --
-
-![UML JAVA](https://github.com/willigfreitas/bertoti/assets/48508462/ecafa921-976b-4bc2-a6ce-0985dbe018dc)
+![UML DEF](https://github.com/willigfreitas/bertoti/assets/48508462/2c8f85f9-eb68-4aa9-bffc-e62febffc57c)
 
 
 **6. código java**
