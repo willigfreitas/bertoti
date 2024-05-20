@@ -160,5 +160,213 @@ Conhecida por sua arquitetura de microserviços. Cada função do sistema, como 
 
 **6. código java**
 --
+
+```
+//Netflix.java
+
+import java.util.LinkedList;
+
+import java.util.List;
+
+public class Netflix {
+    // Declaração das listas de filmes e usuários
+    private List<Filme> filmes = new LinkedList<>();
+    private List<Usuario> usuarios = new LinkedList<>();
+
+    // Método para cadastrar um novo filme
+    public void cadastrarFilme(Filme filme) {
+        filmes.add(filme);
+    }
+
+    // Método para buscar filmes por título
+    public List<Filme> buscarFilmePorTitulo(String nome) {
+        List<Filme> filmesEncontrados = new LinkedList<>();
+        for (Filme filme : filmes) {
+            if (filme.getNome().equals(nome)) {
+                filmesEncontrados.add(filme);
+            }
+        }
+        return filmesEncontrados;
+    }
+
+    // Método para buscar filmes por gênero
+    public List<Filme> buscarFilmePorGenero(String genero) {
+        List<Filme> filmesEncontrados = new LinkedList<>();
+        for (Filme filme : filmes) {
+            if (filme.getGenero().equals(genero)) {
+                filmesEncontrados.add(filme);
+            }
+        }
+        return filmesEncontrados;
+    }
+
+    // Método para cadastrar um novo usuário
+    public void cadastrarUsuario(Usuario usuario) {
+        usuarios.add(usuario);
+    }
+
+    // Método para fazer login de um usuário
+    public boolean login(Usuario usuario) {
+        for (Usuario u : usuarios) {
+            if (u.getNome().equals(usuario.getNome()) && u.getSenha().equals(usuario.getSenha())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // Getters e setters para filmes e usuários
+    public List<Filme> getFilmes() {
+        return filmes;
+    }
+
+    public void setFilmes(List<Filme> filmes) {
+        this.filmes = filmes;
+    }
+
+    public List<Usuario> getUsuarios() {
+        return usuarios;
+    }
+
+    public void setUsuarios(List<Usuario> usuarios) {
+        this.usuarios = usuarios;
+    }
+}
+
+```
+
+```
+//Filme.java
+
+public class Filme {
+    public static final String Filme = null;
+	private String titulo;
+    private String genero;
+	public Object filme;
+
+    // Construtor para inicializar titulo e genero
+    public Filme(String titulo, String genero) {
+        this.titulo = titulo;
+        this.genero = genero;
+    }
+
+    // Métodos getters e setters para titulo e genero
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    // Método para obter o título do filme
+    public String getTitulosFilme() {
+        return titulo;
+    }
+
+    // Método para definir o título do filme
+    public void setTitulosFilme(String titulo) {
+        this.titulo = titulo;
+    }
+
+    // Método para obter detalhes do filme (aqui retornamos apenas o título)
+    public String getDetalhesFilme() {
+        return "Título: " + titulo + ", Gênero: " + genero;
+    }
+
+    // Método para definir detalhes do filme (aqui apenas definimos o título e o gênero)
+    public void setDetalhesFilme(String titulo, String genero) {
+        this.titulo = titulo;
+        this.genero = genero;
+    }
+    
+    // Método para obter o título do filme
+    public String getFilmePorTitulos() {
+        return titulo;
+    }
+
+    // Método para definir o título do filme
+    public void setFilmePorTitulos(String titulo) {
+        this.titulo = titulo;
+    }
+
+	public Object getNome() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}
+```
+
+
+```
+//Usuario.java
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class Usuario {
+    private String nome;
+    private String senha;
+    private List<Filme> filmes = new LinkedList<>();
+
+    // Construtor para inicializar nome e senha
+    public Usuario(String nome, String senha) {
+        this.nome = nome;
+        this.senha = senha;
+    }
+
+    // Método para adicionar um novo filme
+    public void cadastrarFilme(Filme filme) {
+        filmes.add(filme);
+    }
+
+    // Método para remover um filme
+    public void removerFilme(Filme filme) {
+        filmes.remove(filme);
+    }
+
+    // Método para assistir a um filme
+    public void assistirFilme(Filme filme) {
+        // Lógica para assistir ao filme
+        System.out.println("Assistindo ao filme: " + filme.Filme.getTitulo());
+    }
+
+    // Método para definir a lista de filmes
+    public void setFilmes(List<Filme> filmes) {
+        this.filmes = filmes;
+    }
+
+    // Método para obter a lista de filmes
+    public List<Filme> getFilmes() {
+        return filmes;
+    }
+
+    // Getters e setters para nome e senha
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+}
+```
+
 **7. testes**
 --
