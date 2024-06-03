@@ -165,7 +165,6 @@ Conhecida por sua arquitetura de microserviços. Cada função do sistema, como 
 //Netflix.java
 
 import java.util.LinkedList;
-
 import java.util.List;
 
 public class Netflix {
@@ -239,10 +238,8 @@ public class Netflix {
 //Filme.java
 
 public class Filme {
-    public static final String Filme = null;
-	private String titulo;
+    private String titulo;
     private String genero;
-	public Object filme;
 
     // Construtor para inicializar titulo e genero
     public Filme(String titulo, String genero) {
@@ -267,16 +264,6 @@ public class Filme {
         this.genero = genero;
     }
 
-    // Método para obter o título do filme
-    public String getTitulosFilme() {
-        return titulo;
-    }
-
-    // Método para definir o título do filme
-    public void setTitulosFilme(String titulo) {
-        this.titulo = titulo;
-    }
-
     // Método para obter detalhes do filme (aqui retornamos apenas o título)
     public String getDetalhesFilme() {
         return "Título: " + titulo + ", Gênero: " + genero;
@@ -287,21 +274,18 @@ public class Filme {
         this.titulo = titulo;
         this.genero = genero;
     }
-    
-    // Método para obter o título do filme
-    public String getFilmePorTitulos() {
+
+    // Método para obter o título do filme (duplicado)
+    // Este método pode ser removido se não houver necessidade específica para ele
+    public String getNome() {
         return titulo;
     }
 
-    // Método para definir o título do filme
-    public void setFilmePorTitulos(String titulo) {
+    // Método para definir o título do filme (duplicado)
+    // Este método pode ser removido se não houver necessidade específica para ele
+    public void setNome(String titulo) {
         this.titulo = titulo;
     }
-
-	public Object getNome() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }
 ```
 
@@ -336,7 +320,7 @@ public class Usuario {
     // Método para assistir a um filme
     public void assistirFilme(Filme filme) {
         // Lógica para assistir ao filme
-        System.out.println("Assistindo ao filme: " + filme.Filme.getTitulo());
+        System.out.println("Assistindo ao filme: " + filme.getTitulo());
     }
 
     // Método para definir a lista de filmes
@@ -368,5 +352,134 @@ public class Usuario {
 }
 ```
 
-**7. testes**
+**7. TESTES**
+
+```
+//FilmeTest.java
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class FilmeTest {
+
+    @Test
+    public void testFilme() {
+        Filme filme = new Filme("Matrix", "Action");
+        assertEquals("Matrix", filme.getTitulo());
+        assertEquals("Action", filme.getGenero());
+
+        filme.setTitulo("Inception");
+        filme.setGenero("Sci-Fi");
+        assertEquals("Inception", filme.getTitulo());
+        assertEquals("Sci-Fi", filme.getGenero());
+
+        String detalhes = filme.getDetalhesFilme();
+        assertEquals("Título: Inception, Gênero: Sci-Fi", detalhes);
+    }
+}
+```
+
+```
+//NetflixTest.java
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.List;
+
+public class NetflixTest {
+
+    @Test
+    public void testCadastrarFilme() {
+        Netflix netflix = new Netflix();
+        Filme filme = new Filme("Matrix", "Ficção Científica");
+        netflix.cadastrarFilme(filme);
+        
+        List<Filme> filmes = netflix.getFilmes();
+        assertEquals(1, filmes.size());
+        assertEquals("Matrix", filmes.get(0).getNome());
+    }
+
+    @Test
+    public void testBuscarFilmePorTitulo() {
+        Netflix netflix = new Netflix();
+        Filme filme1 = new Filme("Matrix", "Ficção Científica");
+        Filme filme2 = new Filme("Matrix Reloaded", "Ficção Científica");
+        netflix.cadastrarFilme(filme1);
+        netflix.cadastrarFilme(filme2);
+        
+        List<Filme> filmes = netflix.buscarFilmePorTitulo("Matrix");
+        assertEquals(1, filmes.size());
+        assertEquals("Matrix", filmes.get(0).getNome());
+    }
+
+    @Test
+    public void testBuscarFilmePorGenero() {
+        Netflix netflix = new Netflix();
+        Filme filme1 = new Filme("Matrix", "Ficção Científica");
+        Filme filme2 = new Filme("Inception", "Ficção Científica");
+        Filme filme3 = new Filme("Titanic", "Romance");
+        netflix.cadastrarFilme(filme1);
+        netflix.cadastrarFilme(filme2);
+        netflix.cadastrarFilme(filme3);
+        
+        List<Filme> filmes = netflix.buscarFilmePorGenero("Ficção Científica");
+        assertEquals(2, filmes.size());
+    }
+
+    @Test
+    public void testCadastrarUsuario() {
+        Netflix netflix = new Netflix();
+        Usuario usuario = new Usuario("john", "1234");
+        netflix.cadastrarUsuario(usuario);
+        
+        List<Usuario> usuarios = netflix.getUsuarios();
+        assertEquals(1, usuarios.size());
+        assertEquals("john", usuarios.get(0).getNome());
+    }
+
+    @Test
+    public void testLogin() {
+        Netflix netflix = new Netflix();
+        Usuario usuario = new Usuario("john", "1234");
+        netflix.cadastrarUsuario(usuario);
+        
+        assertTrue(netflix.login(new Usuario("john", "1234")));
+        assertFalse(netflix.login(new Usuario("john", "wrongpassword")));
+    }
+}
+```
+
+```
+//UsuarioTest.java
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class UsuarioTest {
+
+    @Test
+    public void testUsuario() {
+        Usuario usuario = new Usuario("john_doe", "password123");
+
+        assertEquals("john_doe", usuario.getNome());
+        assertEquals("password123", usuario.getSenha());
+
+        Filme filme1 = new Filme("Matrix", "Action");
+        Filme filme2 = new Filme("Inception", "Sci-Fi");
+
+        usuario.cadastrarFilme(filme1);
+        usuario.cadastrarFilme(filme2);
+
+        assertTrue(usuario.getFilmes().contains(filme1));
+        assertTrue(usuario.getFilmes().contains(filme2));
+
+        usuario.removerFilme(filme1);
+        assertFalse(usuario.getFilmes().contains(filme1));
+
+        usuario.assistirFilme(filme2);  // Verifique se o filme é impresso corretamente no console
+    }
+}
+```
+
 --
