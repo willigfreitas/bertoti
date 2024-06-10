@@ -158,7 +158,7 @@ Conhecida por sua arquitetura de microserviços. Cada função do sistema, como 
 ![UML DEF](https://github.com/willigfreitas/bertoti/assets/48508462/2c8f85f9-eb68-4aa9-bffc-e62febffc57c)
 
 
-**6. código java**
+**6. Código java**
 --
 
 ```
@@ -482,4 +482,7 @@ public class UsuarioTest {
 }
 ```
 
+--
+
+**6. Atividade de Requisitos (Casos de Uso - Usuário Netflix)**
 --
