@@ -485,4 +485,8 @@ public class UsuarioTest {
 --
 
 **6. Atividade de Requisitos (Casos de Uso - Usuário Netflix)**
+
+
+![SISTEMA i](https://github.com/willigfreitas/bertoti/assets/48508462/425835c9-b325-41b9-8f80-06c7bb4a9149)
+
 --
